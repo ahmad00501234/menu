@@ -1,0 +1,55 @@
+
+header{
+    position: relative;
+    width: 100%;
+    background-color: aqua;
+}
+#main ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#main a{
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+#main>ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+div.sub-menu{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    top: 4rem;
+    right: 0;
+    height: 100vh;
+    overflow-y : scroll;
+    display: none;
+}
+#main>ul>li.item-has-children:hover>div.sub-menu{
+    display: block;
+}
+div.sub-menu>ul.sub-menu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto !important;
+}
+div.sub-menu>ul.sub-menu>li.item-has-children{
+    width: 33.33333333%;
+    padding: 1rem 2rem;
+}
+
+div.sub-menu>ul.sub-menu>li.item-has-children>a{
+    color: goldenrod;
+
+}
+.item-has-children{
+    padding: 1rem 2rem;
+}
+div.sub-menu>ul.sub-menu>li.item-has-children>ul.sub-menu li.item-has-children a{
+    color: white;
+}
+
